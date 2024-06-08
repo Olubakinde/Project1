@@ -1,0 +1,10 @@
+.image-container img {
+    margin-left: 15px;
+    margin-top: 30px;
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    border-radius: 15px;
+}
+
+.image-container {
+    flex: 1;
+}
