@@ -1,0 +1,39 @@
+/* Styles for the container */
+div {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+    gap: 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+}
+
+div::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers */
+}
+
+/* Styles for the images */
+div img {
+    max-height: 250px; /* Limit the height of the images */
+    flex: 0 0 auto;
+    border-radius: 15px;
+    scroll-snap-align: center;
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+div img:hover {
+    transform: scale(1.1); /* Zoom in on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Additional container styling for aesthetics */
+div::before,
+div::after {
+    content: "";
+    flex: 0 0 20px; /* Add space before and after the scrollable area */
+}
